@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armações - Ótica Na Visão</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header / Menu -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Ótica Na Visão" class="logo-img">
+            </div>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    <li><a href="armacoes.html" class="nav-link active">Armações</a></li>
+                    <li><a href="servicos.html" class="nav-link">Serviços</a></li>
+                </ul>
+            </nav>
+            <a href="#contato" class="btn btn-cta scroll-to-footer">Contato</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Nossas Armações</h1>
+            <p class="page-subtitle">Encontre a armação perfeita para você</p>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="section filters-section">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="grau">Óculos de Grau</button>
+                <button class="filter-btn" data-filter="sol">Óculos de Sol</button>
+                <button class="filter-btn" data-filter="infantil">Infantil</button>
+                <button class="filter-btn" data-filter="masculino">Masculino</button>
+                <button class="filter-btn" data-filter="feminino">Feminino</button>
+                <button class="filter-btn" data-filter="unissex">Unissex</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Armações -->
+    <section class="section">
+        <div class="container">
+            <div class="frames-grid-large" id="framesGrid">
+                <!-- Armações serão inseridas via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Detalhes -->
+    <div class="modal" id="frameModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Conteúdo do modal será inserido via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-logo">
+                    <img src="img/logo.png" alt="Ótica Na Visão" class="footer-logo-img">
+                    <p>Cuidando da sua visão com estilo desde 2010.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Endereço</h4>
+                    <p>
+                        Rua das Flores, 123 - Centro<br>
+                        São Paulo - SP, 01234-567
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>
+                        <strong>Telefone:</strong><br>
+                        <a href="tel:+551123456789">(11) 2345-6789</a>
+                    </p>
+                    <p>
+                        <strong>WhatsApp:</strong><br>
+                        <a href="https://wa.me/5511999999999" target="_blank">(11) 99999-9999</a>
+                    </p>
+                    <p>
+                        <strong>E-mail:</strong><br>
+                        <a href="mailto:contato@oticanavisa.com.br">contato@oticanavisa.com.br</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horário de Funcionamento</h4>
+                    <p>
+                        Segunda a Sexta: 9h às 18h<br>
+                        Sábado: 9h às 13h<br>
+                        Domingo: Fechado
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Ótica Na Visão. Todos os direitos reservados.</p>
+                <p class="footer-credit">
+                    Criado por <a href="https://wa.me/5521993350228?text=Olá%20Danilo,%20vim%20através%20do%20site%20Ótica%20à%20Visão,%20gostaria%20de%20saber%20mais%20sobre%20o%20seu%20trabalho." target="_blank">Danilo Farias</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/frames.js"></script>
+</body>
+</html>
+
