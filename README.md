@@ -144,6 +144,5 @@ Para produção, você pode:
 Este projeto foi desenvolvido como exemplo de site institucional.
 
 ---
-
-Desenvolvido com ❤️ usando apenas HTML, CSS e JavaScript puro.
+Usando apenas HTML, CSS e JavaScript puro.
 
