@@ -1,23 +1,59 @@
 // Menu Mobile Toggle
-const menuToggle = document.getElementById('menuToggle');
-const nav = document.getElementById('nav');
-const navLinks = document.querySelectorAll('.nav-link');
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        nav.classList.toggle('active');
-    });
-}
-
-// Fechar menu ao clicar em um link
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
-            menuToggle.classList.remove('active');
-            nav.classList.remove('active');
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const isActive = nav.classList.contains('active');
+            
+            if (isActive) {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.style.overflow = '';
+            } else {
+                menuToggle.classList.add('active');
+                nav.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+        
+        // Prevenir que cliques dentro do menu fechem ele
+        nav.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+        
+        // Fechar menu ao clicar fora dele
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && nav.classList.contains('active')) {
+                if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+                    menuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+        
+        // Fechar menu ao clicar em um link
+        if (navLinks.length > 0) {
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        // Pequeno delay para permitir a navegação
+                        setTimeout(() => {
+                            menuToggle.classList.remove('active');
+                            nav.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }, 100);
+                    }
+                });
+            });
         }
-    });
+    }
 });
 
 // Header scroll effect
